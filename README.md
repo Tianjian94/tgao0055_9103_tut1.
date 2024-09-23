@@ -11,14 +11,15 @@
 
 - This is a large interactive installation that The viewer is further engaged by interacting with the painting; almost infinite variations can occur, as the flows are driven by his hand. The background ambient music is also responsive, making the experience even more intense.
 
-- In this artwork, 
+- In this artwork, I want to combine two aspects in my project, one is infinite variation or rotation of the line, another is user interaction. 
+
+- Generallly speaking, when the user uses the mouse or touches the screen, the elements on the screen change in real time
 
 
 
 
 
 ## Coding Technique Exploration
-[Code example 1](https://openprocessihttps://openprocessing.org/sketch/2118181)
 
-[Code example 2](https://openprocessing.org/sketch/2193076)
+[Code example 1](https://openprocessing.org/sketch/2193076)
 
