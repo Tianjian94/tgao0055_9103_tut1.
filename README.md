@@ -19,7 +19,7 @@
 
 ## Coding Technique Exploration
 
-[Code example 1 (starry night)](https://openprocessing.org/sketch/1209499)
+[Code example (starry night)](https://openprocessing.org/sketch/1209499)
 
 ! [Image of the starry night](asset/starry%20night.png)
 
