@@ -16,10 +16,15 @@
 - Generallly speaking, when the user uses the mouse or touches the screen, the elements on the screen change in real time
 
 
-
-
-
 ## Coding Technique Exploration
 
-[Code example 1](https://openprocessing.org/sketch/2193076)
+[Code example 1 (starry night)](https://openprocessing.org/sketch/1209499)
+
+! [Image of the starry night](asset/starry%20night.png)
+
+! [Image of the starry night2](asset/starry%20night2.png)
+
+
+
+
 
