@@ -25,8 +25,7 @@
 
 ! [Image of the starry night2](asset/starry%20night2.png)
 
-1 Global Variables: Creator set up the global variables, includes 'particles', 'noiseScale', 'speed', 'o'.
-
+1. Global Variables: Creator set up the global variables, includes 'particles', 'noiseScale', 'speed', 'o'.
 ``` 
 let particles = [];
 let noiseScale = 400;
@@ -34,9 +33,12 @@ let speed = 0.1;
 let o = 0;
 ```
 
-2 Preload Function: Set up image 'starry night.jpg' 
+2. Preload Function: Set up image 'starry night.jpg' 
 ```
 function preload() {
     img = loadImage('starry night.jpg');
 }
 ```
+
+3. Setup Function:
+
