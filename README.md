@@ -25,7 +25,8 @@
 
 ! [Image of the starry night2](asset/starry%20night2.png)
 
-1. Global Variables: Creator set up the global variables, includes 'particles', 'noiseScale', 'speed', 'o'.
+1. Global Variables: 
+Creator set up the global variables, includes 'particles', 'noiseScale', 'speed', 'o'.
 ``` 
 let particles = [];
 let noiseScale = 400;
@@ -33,14 +34,16 @@ let speed = 0.1;
 let o = 0;
 ```
 
-2. Preload Function: Set up image 'starry night.jpg' 
+2. Preload Function: 
+Set up image 'starry night.jpg' 
 ```
 function preload() {
     img = loadImage('starry night.jpg');
 }
 ```
 
-3. Setup Function: Set up the canvas size, background, nostroke, for loop (add 100 particle to the particles array)
+3. Setup Function: 
+Set up the canvas size, background, nostroke, for loop (add 100 particle to the particles array)
 ```
 function setup() {
     createCanvas(757, 600);
@@ -52,5 +55,46 @@ function setup() {
 }
 ```
 
+4. Draw Function: 
+If the mouse isn’t pressed, the part.action() allow them to update their position and draw themselves.
+Then, If the frame rate is above 50, it adds a new particle to the particles array, 
 
+```
+function draw() {
+    if (!mouseIsPressed) {
+        mouseX = noise(frameCount / 100) * width;
+        mouseY = noise(frameCount / 100 + 100) * height;
+    }
+    for (i = 0; i < 10; i++) {
+        for (let part of particles) {
+            part.action();
+        }
+    }
+    if (frameRate() > 50) {
+        particles.push(new p());
+    }
+    for (i = 0; i < 10; i++) {
+        if (particles[int(random(100))].lt > 200) {
+            particles[int(random(100))].pos = createVector(mouseX + random(-50, 50), mouseY + random(-50, 50));
+            particles[int(random(100))].lt = 0;
+        }
+    }
+}
+```
+
+5. Key Press Function:
+Use if/else statement to Toggle the animation 
+```
+function keyPressed() {
+    if (keyCode == 32) {
+        if (o == 1) {
+            noLoop();
+            o = 0;
+        } else {
+            loop();
+            o = 1;
+        }
+    }
+}
+```
 
