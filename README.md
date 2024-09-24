@@ -40,5 +40,17 @@ function preload() {
 }
 ```
 
-3. Setup Function:
+3. Setup Function: Set up the canvas size, background, nostroke, for loop (add 100 particle to the particles array)
+```
+function setup() {
+    createCanvas(757, 600);
+    background(0);
+    noStroke();
+    for (i = 0; i < 100; i++) {
+        particles.push(new p());
+    }
+}
+```
+
+
 
