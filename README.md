@@ -21,9 +21,9 @@
 
 [Code example (starry night)](https://openprocessing.org/sketch/1209499)
 
-! [Image of the starry night](asset/starry%20night.png)
+![Image of the starry night](asset/starry%20night.png)
 
-! [Image of the starry night2](asset/starry%20night2.png)
+![Image of the starry night2](asset/starry%20night2.png)
 
 1. Global Variables: 
 Creator set up the global variables, includes 'particles', 'noiseScale', 'speed', 'o'.
