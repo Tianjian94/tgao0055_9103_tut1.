@@ -83,7 +83,7 @@ function draw() {
 ```
 
 5. Key Press Function:
-Use if/else statement to Toggle the animation 
+Use if/else statement to Toggle the animation, when the spacebar is pressed, it stops the loop, else, it resumes the loop. 
 ```
 function keyPressed() {
     if (keyCode == 32) {
