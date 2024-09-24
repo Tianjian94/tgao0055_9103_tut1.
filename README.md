@@ -43,7 +43,7 @@ function preload() {
 ```
 
 3. Setup Function: 
-Set up the canvas size, background, nostroke, for loop (add 100 particle to the particles array)
+Set up the canvas size, background(), nostroke(), for loop (add 100 particle to the particles array)
 ```
 function setup() {
     createCanvas(757, 600);
@@ -98,3 +98,29 @@ function keyPressed() {
 }
 ```
 
+6. Particle Class:
+In constructor(), creator defines the position and alpha of the particle, makes every particle randomly.
+In action(), creator caculates the particle's current position to generate the 'a', then, use the cos(), sin() to control the speed of particle. If particle moves outside the canvas boundaries, a new particle is generated in a new location and the alpha value is random as well. Use img get() to get the color from the loaded image, and set up the alpha value for the color of the particle, finally, draw the ellipse particle in updated position. 
+
+```
+class p {
+    constructor() {
+        this.pos = createVector(random(0, width), random(0, height));
+        this.alpha = random(-50, 50);
+        this.lt = 0;
+    }
+    action() {
+        let a = noise(this.pos.x / noiseScale, this.pos.y / noiseScale) * 2 * PI * noiseScale;
+        this.pos.x += cos(a) * speed;
+        this.pos.y += sin(a) * speed;
+        if (this.pos.x < 0 || this.pos.x > width || this.pos.y < 0 || this.pos.y > height) {
+            this.pos = createVector(random(0, width), random(0, height));
+            this.alpha = random(-50, 50);
+        }
+        let c = img.get(int(this.pos.x), int(this.pos.y));
+        fill(red(c) + this.alpha, green(c) + this.alpha, blue(c) + this.alpha);
+        ellipse(this.pos.x, this.pos.y, 5);
+        this.lt++;
+    }
+}
+```
