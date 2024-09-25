@@ -25,40 +25,12 @@
 
 ![Image of the starry night2](asset/starry%20night2.png)
 
-1. Global Variables: 
-Creator set up the global variables, includes 'particles', 'noiseScale', 'speed', 'o'.
-``` 
-let particles = [];
-let noiseScale = 400;
-let speed = 0.1;
-let o = 0;
-```
 
-2. Preload Function: 
-Set up image 'starry night.jpg' 
-```
-function preload() {
-    img = loadImage('starry night.jpg');
-}
-```
-
-3. Setup Function: 
-Set up the canvas size, background(), nostroke(), for loop (add 100 particle to the particles array)
-```
-function setup() {
-    createCanvas(757, 600);
-    background(0);
-    noStroke();
-    for (i = 0; i < 100; i++) {
-        particles.push(new p());
-    }
-}
-```
-
-4. Draw Function: 
+1. Draw Function: 
 If the mouse isn’t pressed, the part.action() allow them to update their position and draw themselves.
-Then, If the frame rate is above 50, it adds a new particle to the particles array, 
+Then, If the frame rate is above 50, it adds a new particle to the particles array.
 
+(In this step, I want to use the same way in my project which means each stroke of an item can be represented by a particle object, when the user press the mouse, they can influence the particle swarm, and changes can occur to generate new strokes around the mouse.)
 ```
 function draw() {
     if (!mouseIsPressed) {
@@ -82,8 +54,10 @@ function draw() {
 }
 ```
 
-5. Key Press Function:
-Use if/else statement to Toggle the animation, when the spacebar is pressed, it stops the loop, else, it resumes the loop. 
+2. Key Press Function:
+Use if/else statement to Toggle the animation, when the spacebar is pressed, it stops the loop, else, it resumes the loop.
+
+(In this step, I want to use spacebar to control the animation of the project, users can pause or keep the animation going.) 
 ```
 function keyPressed() {
     if (keyCode == 32) {
@@ -98,9 +72,11 @@ function keyPressed() {
 }
 ```
 
-6. Particle Class:
+3. Particle Class:
 In constructor(), creator defines the position and alpha of the particle, makes every particle randomly.
-In action(), creator caculates the particle's current position to generate the 'a', then, use the cos(), sin() to control the speed of particle. If particle moves outside the canvas boundaries, a new particle is generated in a new location and the alpha value is random as well. Use img get() to get the color from the loaded image, and set up the alpha value for the color of the particle, finally, draw the ellipse particle in updated position. 
+In action(), creator caculates the particle's current position to generate the 'a', then, use the cos(), sin() to control the speed of particle. If particle moves outside the canvas boundaries, a new particle is generated in a new location and the alpha value is random as well. Use img get() to get the color from the loaded image, and set up the alpha value for the color of the particle, finally, draw the ellipse particle in updated position.
+
+(In thhis step, I want to use the class method to change the every position of the stroke, color of the stroke, movement of the stroke in my project.) 
 
 ```
 class p {
