@@ -21,10 +21,11 @@
 
 ### [Code example (starry night)](https://openprocessing.org/sketch/1209499)
 
+#### Screenshot
+
 ![Image of the starry night](asset/starry%20night.png)
 
 ![Image of the starry night2](asset/starry%20night2.png)
-
 
 1. (In this step, I want to use the for loop in my project which means each stroke of an item can be represented by a particle object, when the user press the mouse, they can influence the particle swarm, and changes can occur to generate new strokes around the mouse randomly.)
 ```
